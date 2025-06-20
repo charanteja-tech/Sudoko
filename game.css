@@ -1,0 +1,115 @@
+body {
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 30px;
+}
+
+#stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    gap: 0;
+    width: fit-content;
+    margin: 30px auto;
+    border: 2px solid black;
+    background-color: #fafafa;
+}
+
+#board p {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#board p.empty {
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+
+#board p.selected {
+    background-color: #fff176;
+}
+
+#board p:nth-child(3n) {
+    border-right: 2px solid black;
+}
+
+#board p:nth-child(n+19):nth-child(-n+27),
+#board p:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 2px solid black;
+}
+
+#board-contains {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+#board-contains > p {
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#board-contains > p:hover,
+#board-contains > p.selected {
+    background-color: #b2ebf2;
+}
+#checkButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#checkButton:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+#checkButton:active {
+    background-color: #1e7e34;
+    transform: scale(0.98);
+}

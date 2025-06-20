@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Page</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <h1>Welcome to the Sudoku!</h1>
+    <div id="stats">
+    <p>Lives: 3</p>
+    <p id="timer">Timer - <span id="min">00</span>:<span id="sec">00</span></p>
+</div>
+
+    <div id="game">
+        <div id="board"></div>
+    <div id="board-contains">
+        <p id="one">1</p>
+        <p id="two">2</p>
+        <p id="three">3</p>
+        <p id="four">4</p>
+        <p id="five">5</p>
+        <p id="six">6</p>
+        <p id="seven">7</p>
+        <p id="eight">8</p>
+        <p id="nine">9</p>
+    </div>
+    <div >
+    <button id="checkButton" onclick="checkSolution()">Check Solution</button>
+</div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
